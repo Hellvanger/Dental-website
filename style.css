@@ -1,0 +1,988 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+/*.header {*/
+/*    background-color: black;*/
+/*    text-align: center;*/
+/*    padding: 100px;*/
+
+.welcome .welcomebutton{
+    display: flex;
+    background-color: darkslateblue;
+    align-items: center;
+    justify-content: center;
+    position: center;
+    width: 100%;
+    min-height: 100vh;
+    border: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+.welcome {
+    background-color: black;
+    text-shadow: #bbbbbb;
+    color: ghostwhite;
+    display: flex;
+    position: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-shadow: black;
+}
+
+.welcome img {
+    size: 50em;
+}
+
+.welcome:hover {
+
+    color: royalblue;
+
+    box-shadow: royalblue;
+}
+/*.welcomebutton {*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    background-color: black;*/
+/*    color: #bbbbbb;*/
+/*    position: center;*/
+/*    width: 115px;*/
+/*    padding: 10px;*/
+/*    box-shadow: black;*/
+/*    border-radius: 25px;*/
+/*    -webkit-border-radius: 20px;*/
+/*    -moz-border-radius: 25px;*/
+/*}*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: None;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: None;
+}
+
+.row {
+
+    display: flex;
+}
+.row1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation_row1 {
+    text-decoration: none;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    color: black;
+    background-color: black;
+    aspect-ratio: 3/4;
+    object-fit: contain;
+    padding-top: 4px;
+    padding-right: 15px;
+}
+.flex {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(2em, 5vw, 5em);
+}
+
+.flex>* {
+    flex: 1 1 25em;
+}
+
+.column {
+    display: grid;
+}
+
+.container {
+    max-width: 100%;
+    max-height: 65px;
+    padding: 0.7em 10em;
+    margin: 0 auto;
+}
+
+
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px 16px;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    box-shadow: black;
+    scrollbar-shadow-color: transparent;
+}
+
+nav ul {
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+}
+
+nav a {
+    font-size: 16px;
+    color: gray;
+}
+
+nav a:hover {
+
+    color: darkturquoise;
+    position: sticky;
+    border-bottom-style: groove;
+    border-bottom-color: blue;
+    /*animation-play-state: running;*/
+    -moz-border-bottom-colors: blue;
+}
+
+nav a.active {
+    background-color: dodgerblue;
+}
+.toggleContact.c-active::after {
+    content: "";
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    /*background-image: url();*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+}
+
+.logo {
+    padding-top: 50px;
+    position: center;
+    width: 220px;
+    height: 140px;
+    size: 200px;
+    color: black;
+}
+
+
+
+.form {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2em;
+}
+
+
+
+
+.contactMenu {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    min-height: 0;
+    opacity: 0;
+    background: rgb(0,0,0,0.3);
+    padding: 4em 0;
+    transform: scale(0);
+    -ms-transform: scale(0);
+
+}
+
+
+
+.contactMenu.c-active {
+    position: fixed;
+    min-height: 100vh;
+    opacity: 1;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    z-index: 9;
+}
+
+.toggleContact {
+    background-color: royalblue;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    box-shadow: black;
+    height: 30px;
+    width: 165px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+.contactMenu-content {
+    text-align: center;
+    /*background: url(dental-care-5557438_640.jpg);*/
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+    padding: 2em;
+    box-shadow:black;
+    overflow-y: scroll;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+
+}
+.contactMenu-content label {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    padding-bottom: 0.5em;
+}
+
+.contactMenu-content form input, .contactMenu-content form select {
+    width: 100%;
+    padding: 1em 0.5em;
+    border: 1px solid white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+
+}
+
+/*@media screen and (min-width: 1205px) {*/
+/*    .container {*/
+/*        max-width: 1200px;*/
+/*    }*/
+/*}*/
+
+@media screen and (max-width: 1000px) {
+    .toggleMenu {
+        /*background-image: url(./menu_FILL0_wght400_GRAD0_opsz48.svg);*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        transition: background-size 0.3s ease-in-out;
+        -webkit-transition: background-size 0.3s ease-in-out;
+        -moz-transition: background-size 0.3s ease-in-out;
+        -ms-transition: background-size 0.3s ease-in-out;
+        -o-transition: background-size 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .toggleMenu.active {
+        position: fixed;
+        /*background-image: url(close_FILL0_wght400_GRAD0_opsz48.svg);*/
+        background-size: 25px;
+    }
+
+    .navigation {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        min-height: 0;
+        opacity: 0;
+        transform: scale(0);
+
+    }
+}
+
+/*this part is for slide show on main home page*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-Container {
+    /*background-repeat: no-repeat;*/
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    animation: ease-in-out;
+}
+
+/* Hide the images by default */
+/*.mySlides {*/
+/*    display: none;*/
+/*}*/
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    /*background-color: rgba(0,0,0,0.8);*/
+    color: transparent;
+    background-color: transparent;
+}
+
+/* Caption text */
+.text {
+    color: royalblue;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: darkslateblue;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*this part here for about us*/
+
+h2 {
+    font-weight: 700;
+    font-size: medium;
+    text-transform: capitalize;
+
+}
+
+
+.aboutus_text {
+    padding: 0.7em 10em;
+    font-weight: 700;
+    font-size: larger;
+}
+
+.aboutus_text h2 {
+    font-weight: 700;
+    font-size: 45px;
+    font-family: Arial;
+
+}
+
+.reveal {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.service {
+
+}
+
+h3 {
+
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+/*home page button*/
+
+.page-btn {
+    background-color: royalblue;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0.7em 2em;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+
+.page-btn.active, .page-btn:hover {
+    background-color: darkblue;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+/*for zig zag line*/
+.zig-zag {
+    border: none;
+    left: 25px;
+    width: 88%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 0.7em 10em;
+    height: 40px;
+    background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(315deg, #ECEDDC 25%, transparent 25%), linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+    background-size: 40px 40px;
+    background-color: royalblue;
+}
+
+/*--------------------------------*/
+
+/* Customers review/testimonial card */
+
+.testimonial {
+    display: inline-block;
+    position: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10em 10em;
+    background-color: black;
+
+}
+
+.snip1533 {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    color: #000000;
+    display: inline-block;
+
+    align-items: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    width: 30%;
+    height: 65%;
+    padding-bottom: 50px;
+
+    position: relative;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-top: 5px solid royalblue;
+
+}
+
+
+
+
+.snip1533 figcaption:before {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #d2652d;
+    content: "\f10e";
+    font-family: 'FontAwesome';
+    font-size: 32px;
+    font-style: normal;
+    left: 50%;
+    line-height: 60px;
+    position: absolute;
+    top: -30px;
+    width: 60px;
+}
+
+.snip1533 h3 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 10px 0 5px;
+}
+
+.snip1533 h4 {
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.snip1533 blockquote {
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 0 30px;
+}
+
+
+
+/* Add an italic font style to all quotes */
+q {
+    font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+
+/*------------------*/
+
+.teamsectionBorder {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+
+}
+.img {
+    height: 25%;
+    width: 25%;
+    float: left;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+
+}
+
+.imgteam {
+    float: right;
+
+}
+.aboutteam {
+    background-color: ghostwhite;
+    padding: 0.7em 10em;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+.teamText {
+    background-color: whitesmoke;
+    height: border-box;
+    box-shadow: darkgray;
+    border-radius: 50px;
+}
+
+.teamText h2 {
+    font-weight: 700;
+    font-size: 45px;
+    font-family: Arial;
+
+}
+.teamText p {
+    font-family: 'Poppins', sans-serif;
+
+}
+.choicebutton {
+    display: flex;
+    gap: 5px;
+}
+/* this part for customer review slide*/
+
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.container h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 950;
+    font-size: 42px;
+    color: royalblue;
+    /*margin: 50px;*/
+    padding: 0.7em 10em;
+
+}
+
+
+.swiper.mySlides {
+    position: center;
+    width: 850px;
+    height: 400px;
+    margin-top: 25%;
+
+}
+/*.stars {*/
+/*    background-image: url("./icons8-christmas-star-48.png");*/
+/*    background-repeat: repeat-x;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    position: center;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*}*/
+
+/*}*/
+.swiper-slide {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+/*this part here is for services*/
+
+.ourserviceText {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 950;
+    font-size: 42px;
+    color: royalblue;
+    margin: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.column1 img {
+    width: 150px;
+    aspect-ratio: 4/8;
+    object-fit: contain;
+}
+
+/* Float four columns side by side */
+.column {
+    position: center;
+    background-color: transparent;
+    float: left;
+    width: 25%;
+    padding: 0.7em;
+}
+.column1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 50px;
+    background-color: transparent;
+    color: orange;
+    float: left;
+    width: 19%;
+    margin: 5px;
+    padding: 2em 2em;
+    padding-left: 5%;
+
+}
+/* Remove extra left and right margins, due to padding in columns */
+.serviceRow {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.serviceRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/* Style the counter cards */
+.card {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    border-radius: 10px;
+    padding-bottom: 0.5em;
+    text-align: center;
+
+}
+
+.card1 {
+    text-transform: uppercase;
+    text-align: justify-all;
+    right: 75%;
+    height: 45%;
+    width: 50%;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 0.7em 2em;
+
+
+}
+
+.card:hover {
+    background-color: royalblue;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/*for footer*/
+.footer {
+    background-color: royalblue;
+    height: 50px;
+}
+.footer h5{
+    color: #bbbbbb;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+.footercard h1 {
+    text-decoration: underline;
+
+}
+.footercontactMenu {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    min-height: 0;
+    opacity: 0;
+    background: rgb(0,0,0,0.3);
+    padding: 4em 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+
+}
+
+.footercontactMenu {
+    text-align: center;
+    /*background: url(dental-care-5557438_640.jpg);*/
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 2em;
+    box-shadow: 0px 4px 10px 1px black;
+    overflow-y: scroll;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border: 20px;
+    -o-border-radius: 20px;
+}
+.footercontactMenu label {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    padding-bottom: 0.5em;
+}
+
+.footercolumn {
+    background-color: black;
+    position: center;
+
+    width: 25%;
+    padding:0;
+}
+
+.footercolumn p {
+    color: lightgrey;
+    padding: 0.7em;
+}
+.footercolumn p:hover {
+    color: white;
+
+}
+.footerSection {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+
+}
+
+/* Clear floats after the columns */
+.footerSection:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footercard {
+    display: grid;
+    border-radius: 10px;
+    padding: 0.7em 2em;
+
+}
+.footercard h1 {
+
+}
+
+.footercard img {
+    display: flex;
+    border-radius: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+form {
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: royalblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+}
+input[type=submit]:hover {
+    background-color: darkblue;
+}
+
+
+
+/*-----------------------------------------------*/
+/*for the teddy bear animation*/
+/*.footercard img:hover {*/
+/*    !* Start the shake animation and make the animation last for 0.5 seconds *!*/
+/*    animation: shake 0.5s;*/
+/*    !* When the animation is finished, start again *!*/
+/*    animation-iteration-count: infinite;*/
+/*}*/
+/*@keyframes shake {*/
+/*    0% { transform: translate(1px, 1px) rotate(0deg); }*/
+/*    10% { transform: translate(-1px, -2px) rotate(-1deg); }*/
+/*    20% { transform: translate(-3px, 0px) rotate(1deg); }*/
+/*    30% { transform: translate(3px, 2px) rotate(0deg); }*/
+/*    40% { transform: translate(1px, -1px) rotate(1deg); }*/
+/*    50% { transform: translate(-1px, 2px) rotate(-1deg); }*/
+/*    60% { transform: translate(-3px, 1px) rotate(0deg); }*/
+/*    70% { transform: translate(3px, 1px) rotate(-1deg); }*/
+/*    80% { transform: translate(-1px, -1px) rotate(1deg); }*/
+/*    90% { transform: translate(1px, 2px) rotate(0deg); }*/
+/*    100% { transform: translate(1px, -2px) rotate(-1deg); }*/
+/*}*/
+
+/*------------------------------------------------------------*/
+/* Set the size of the div element that contains the map */
+#map {
+    height: 550px;
+    /* The height is 400 pixels */
+    width: 185%;
+    position: relative;
+    left: -50%;
+    top: 50px;
+    /* The width is the width of the web page */
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+@media screen and (min-width: 500px) {
+    .footercard #map {
+        display: block;
+        left: -50%;
+    }
+}
+
+.icons  {
+    display: flex;
+    /*justify-content: space-evenly;*/
+    align-items: center;
+
+    gap: 8px;
+
+}
